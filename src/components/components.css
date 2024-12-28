@@ -1,0 +1,535 @@
+@font-face{
+    font-family: 'sweat-sans';
+    src: url(../fonts/SweetSansProBold.otf);
+}
+
+.hero{
+    height: 100vh;
+    background-image: url(../../public/bg-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(20%);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.1);
+    filter: brightness(90%);
+    height: 15vh;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.bars {
+    font-size: 20px;
+    color: #AC906C;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.mobile-view {
+    display: none;
+}
+
+.logo {
+    font-size: 26px;
+    color: #AC906C;
+    font-family: 'sweat-sans';
+    font-weight: 200;
+}
+
+.navbar > .navbar-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar > .navbar-nav > li {
+    color: #AC906C;
+    font-weight: 600;
+    font-family: 'sweat-sans';
+}
+
+.hero-text {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-logo {
+    color: #AC906C;
+    font-size: 52px;
+    font-family: 'sweat-sans';
+}
+
+.hero-para {
+    color: #FFFF;
+    font-size: 24px;
+    font-family: 'sweat-sans';
+}
+
+.card-container {
+    height: 50vh;
+    width: 80%;
+    background: transparent;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.cards-logo {
+    color: #FFFF;
+    font-size: 24px;
+    font-family: 'sweat-sans';
+    margin-left: 30px;
+}
+
+.main-card-container {
+    position: absolute;
+    top: 480;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    padding: 50px;
+    gap: 80px;
+}
+
+.bottom {
+    background-color: black;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-image{
+    width: 15em;
+}
+
+.card-heading {
+    font-size: 20px;
+    font-family: 'sweat-sans';
+    color: #FFFF;
+    text-transform: uppercase;
+}
+
+.card-text {
+    color: #FFFF;
+    font-family: 'sweat-sans';
+    width: 110%;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.footer {
+    background-color: black;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 18px;
+    font-family: 'sweat-sans';
+    color: #fff;
+}
+
+.footer-text {
+    color: #CCCCCC;
+    font-size: 14px;
+    font-family: 'sweat-sans';
+}
+
+
+@media only screen and (max-width:350px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        height: 20vh;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    .mobile-view {
+        display: block;
+    }
+
+    .mobile-view {
+        height: 100vh;
+        position: absolute;
+        width: 65%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        right: -230;
+        gap: 20px;
+        padding: 19px;
+        background-color: rgba(0, 0, 0, 1);
+        color: #AC906C;
+        font-family: "sweat-sans";
+        transition: .5s all ease;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .navbar > .navbar-nav {
+        display: none;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero-logo {
+        font-size: 32px;
+    }
+    .hero-para {
+        font-size: 14px;
+    }
+    .cards {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .cards-logo {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .card-heading {
+        font-size: 12px;
+    }
+    .card-container {
+        padding: 0px;
+    }
+    .card-text {
+        font-size: 12px;
+    }
+    .bottom {
+        height: 200vh;
+    }
+}
+
+@media only screen and (min-width:350px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        height: 10vh;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    .mobile-view {
+        display: block;
+    }
+
+    .mobile-view {
+        height: 100vh;
+        position: absolute;
+        width: 65%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        right: -400;
+        gap: 50px;
+        padding: 19px;
+        background-color: rgba(0, 0, 0, 1);
+        color: #AC906C;
+        font-family: "sweat-sans";
+        transition: .5s all ease;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .navbar > .navbar-nav {
+        display: none;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero-logo {
+        font-size: 32px;
+    }
+    .hero-para {
+        font-size: 14px;
+    }
+    .cards {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    .cards-logo {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .card-heading {
+        font-size: 12px;
+    }
+    .card-container {
+        padding: 0px;
+        z-index: 10;
+    }
+    .card-text {
+        font-size: 12px;
+    }
+    .bottom {
+        height: 400vh;
+    }
+}
+
+@media only screen and (min-width:550px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        height: 10vh;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .bars {
+        font-size: 24px;
+    }
+    
+    .mobile-view {
+        display: block;
+    }
+
+    .mobile-view {
+        height: 100vh;
+        position: absolute;
+        width: 65%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        right: -1000;
+        gap: 40px;
+        padding: 19px;
+        background-color: rgba(0, 0, 0, 1);
+        color: #AC906C;
+        font-family: "sweat-sans";
+        transition: .5s all ease;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .navbar > .navbar-nav {
+        display: none;
+    }
+
+    .hero-logo {
+        font-size: 42px;
+    }
+    .hero-para {
+        font-size: 20px;
+    }
+    .cards {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    .cards-logo {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+    .card-heading {
+        font-size: 16px;
+    }
+    .card-container {
+        padding: 0px;
+        z-index: 10;
+    }
+    .card-text {
+        font-size: 14px;
+    }
+    .bottom {
+        height: 150vh;
+    }
+}
+
+@media only screen and (min-width:750px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        height: 10vh;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .bars {
+        display: none;
+    }
+
+    .mobile-view {
+       display: none;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .navbar > .navbar-nav {
+        display: flex;
+        gap: 8px;
+    }
+
+    .navbar-nav > li {
+        font-size: 14px;
+    }
+
+    .contact { 
+        margin-left: 2px;
+    }
+
+    .hero-logo {
+        font-size: 42px;
+    }
+    .hero-para {
+        font-size: 20px;
+    }
+    .cards {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    .cards-logo {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+    .card-heading {
+        font-size: 16px;
+    }
+    .card-container {
+        padding: 0px;
+        z-index: 10;
+    }
+    .card-text {
+        font-size: 14px;
+    }
+    .bottom {
+        height: 150vh;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        height: 15vh;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .bars {
+        display: none;
+    }
+
+    .mobile-view {
+       display: none;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .navbar > .navbar-nav {
+        display: flex;
+        gap:25px;
+    }
+
+    .navbar-nav > li {
+        font-size: 17px;
+    }
+
+    .contact { 
+        margin-left: 22px;
+    }
+
+    .hero-logo {
+        font-size: 52px;
+    }
+    .hero-para {
+        font-size: 24px;
+    }
+    .cards {
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards-logo {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+    .card-heading {
+        font-size: 20px;
+    }
+    .card-container {
+        padding: 0px;
+        z-index: 10;
+    }
+    .card-text {
+        font-size: 16px;
+    }
+    .bottom {
+        height: 100vh;
+    }
+}
